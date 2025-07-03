@@ -6562,16 +6562,16 @@ DisplayString ::= TEXTUAL-CONVENTION
         hwDGType OBJECT-TYPE
             SYNTAX INTEGER {
                 intelligent(1),
-                non_intelligent(2),
+                nonIntelligent(2),
                 unknown(255)
             }
             MAX-ACCESS read-only
             STATUS current
             DESCRIPTION
-                "Specific type of the DG module. It is an enumeration type:
-                  If the enumeration value is 1, it indicates a intelligent DG module; 
-                  If the enumeration value is 2, it indicates a non_intelligent module; 
-                  If the enumeration value is 255, it indicates a unknown module; "
+                "Indicates the type of the DG module:
+                  - intelligent(1): An intelligent DG module
+                  - nonIntelligent(2): A non-intelligent module
+                  - unknown(255): An unknown module"
             ::= { hwDGEntry 4 }
 
         hwDGAphaseVoltage OBJECT-TYPE
