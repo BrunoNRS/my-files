@@ -3296,7 +3296,7 @@ DisplayString ::= TEXTUAL-CONVENTION
             DESCRIPTION
                 "Low-voltage power-off disconnected time, It can be configured by users,
                 value range defines between 5 to 1000, 
-                unit: minutes(min) £¨
+                unit: minutes(min) Ôºå
                 and its value is an integer (1). 
                 Here, if battery manual test is standard mode, 
                 If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid.
@@ -3518,7 +3518,7 @@ DisplayString ::= TEXTUAL-CONVENTION
             DESCRIPTION
                 "Low-voltage power-off disconnected time, It can be configured by users,
                 value range defines between 5 to 1000, 
-                unit: minutes(min) £¨
+                unit: minutes(min) Ôºå
                 and its value is an integer (1). 
                 Here, if battery manual test is standard mode, 
                 If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid.
@@ -3696,7 +3696,7 @@ DisplayString ::= TEXTUAL-CONVENTION
             DESCRIPTION
                 "Low-voltage power-off disconnected time, It can be configured by users,
                 value range defines between 5 to 1000, 
-                unit: minutes(min) £¨
+                unit: minutes(min) Ôºå
                 and its value is an integer (1). 
                 Here, if battery manual test is standard mode, 
                 If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid.
@@ -6392,7 +6392,7 @@ DisplayString ::= TEXTUAL-CONVENTION
             ::= { hwSiteAcAmmeterEntry 43 }
 
         hwAcAmmeterPhaseL3PowerFactorCH1 OBJECT-TYPE
-            SYNTAX Integer32 (-100.100)
+            SYNTAX Integer32 (-100..100)
             MAX-ACCESS read-only
             STATUS current
             DESCRIPTION
@@ -8511,7 +8511,8 @@ DisplayString ::= TEXTUAL-CONVENTION
             DESCRIPTION
                 "Battery cell number, can be configued by users. 
                 Value range: 1 to 32, 
-                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. "
+                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. 
+"
             ::= { hwAcbGroupSetEntry 5 }
 
         hwAcbGroupSetTotalCapacity OBJECT-TYPE
@@ -8534,7 +8535,8 @@ DisplayString ::= TEXTUAL-CONVENTION
                 Value range: 42 to 58, 
                 units: v, 
                 and the value is accurate to one decimal space (.1).  
-                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. "
+                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. 
+"
             ::= { hwAcbGroupSetEntry 11 }
 
         hwAcbGroupFloatVolt OBJECT-TYPE
@@ -8546,7 +8548,8 @@ DisplayString ::= TEXTUAL-CONVENTION
                 Value range: 42 to 58, 
                 units: v, 
                 and the value is accurate to one decimal space (.1).  
-                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. "
+                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. 
+"
             ::= { hwAcbGroupSetEntry 12 }
 
         hwAcbGroupChargeCurrLimitThr OBJECT-TYPE
@@ -8559,7 +8562,8 @@ DisplayString ::= TEXTUAL-CONVENTION
                 units: C10, 
                 and the value is accurate to one decimal space (.01).  
                 If the setting value is beyond the current support range, it will fail.
-                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. "
+                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. 
+"
             ::= { hwAcbGroupSetEntry 13 }
 
         hwAcbGroupOverCurThr OBJECT-TYPE
@@ -8571,7 +8575,8 @@ DisplayString ::= TEXTUAL-CONVENTION
                 Value range: 0.15 to 1.2, 
                 units: C10, 
                 and the value is accurate to one decimal space (.01).  
-                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid."
+                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid.
+"
             ::= { hwAcbGroupSetEntry 14 }
 
         hwAcbGroupHighTempThr OBJECT-TYPE
@@ -8581,9 +8586,10 @@ DisplayString ::= TEXTUAL-CONVENTION
             DESCRIPTION
                 "Upper threshold of the environment temperature alarm, can be configured by users. 
                 Value range: 35 to 70, 
-                units: centigrade (°„C), 
+                units: centigrade (¬∞C), 
                 and the value is an integer (1).  
-                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. "
+                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. 
+"
             ::= { hwAcbGroupSetEntry 21 }
 
         hwAcbGroupLowTempThr OBJECT-TYPE
@@ -8595,7 +8601,8 @@ DisplayString ::= TEXTUAL-CONVENTION
                 Value range: -50 to 10, 
                 units: centigrade (degC), 
                 and the value is an integer (1).  
-                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. "
+                If the value is 2147483647(0x7FFFFFFF), it indicates that the value is invalid. 
+"
             ::= { hwAcbGroupSetEntry 22 }
 
         hwAcbGroupDodToAcidBattery OBJECT-TYPE
@@ -12604,42 +12611,42 @@ DisplayString ::= TEXTUAL-CONVENTION
             OBJECTS { hwAlarmTrapOrdinalNumber,hwAlarmText,hwAlarmLevel,hwAlarmSigDesc,hwSiteName,hwSiteAdminAddr,hwNetIdentifier,hwSiteDescription,hwDoorSensorEquipId,hwDoorEquipName,hwDoorSensorFatherEquipname            }
             STATUS current
             DESCRIPTION
-                "Door open. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID°¢equip name°¢father equip name are also include in VB(variable bondings)."
+                "Door open. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID„ÄÅequip name„ÄÅfather equip name are also include in VB(variable bondings)."
             ::= { hwSiteAlarmTrapsPrefix 31 }
 
         hwDoorAlarmResumeTraps NOTIFICATION-TYPE
             OBJECTS { hwAlarmTrapOrdinalNumber,hwAlarmText,hwAlarmLevel,hwAlarmSigDesc,hwSiteName,hwSiteAdminAddr,hwNetIdentifier,hwSiteDescription,hwDoorSensorEquipId,hwDoorEquipName,hwDoorSensorFatherEquipname            }
             STATUS current
             DESCRIPTION
-                "Door alarm resume. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID°¢equip name°¢father equip name are also include in VB(variable bondings)."
+                "Door alarm resume. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID„ÄÅequip name„ÄÅfather equip name are also include in VB(variable bondings)."
             ::= { hwSiteAlarmTrapsPrefix 32 }
 
         hwWaterAlarmTraps NOTIFICATION-TYPE
             OBJECTS { hwAlarmTrapOrdinalNumber,hwAlarmText,hwAlarmLevel,hwAlarmSigDesc,hwSiteName,hwSiteAdminAddr,hwNetIdentifier,hwSiteDescription,hwWaterSensorEquipId,hwWaterEquipName,hwWaterSensorFatherEquipname            }
             STATUS current
             DESCRIPTION
-                "Water alarm. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID°¢equip name°¢father equip name are also include in VB(variable bondings)."
+                "Water alarm. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID„ÄÅequip name„ÄÅfather equip name are also include in VB(variable bondings)."
             ::= { hwSiteAlarmTrapsPrefix 33 }
 
         hwWaterAlarmResumeTraps NOTIFICATION-TYPE
             OBJECTS { hwAlarmTrapOrdinalNumber,hwAlarmText,hwAlarmLevel,hwAlarmSigDesc,hwSiteName,hwSiteAdminAddr,hwNetIdentifier,hwSiteDescription,hwWaterSensorEquipId,hwWaterEquipName,hwWaterSensorFatherEquipname            }
             STATUS current
             DESCRIPTION
-                "Water alarm resume. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID°¢equip name°¢father equip name are also include in VB(variable bondings)."
+                "Water alarm resume. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID„ÄÅequip name„ÄÅfather equip name are also include in VB(variable bondings)."
             ::= { hwSiteAlarmTrapsPrefix 34 }
 
         hwSmokeAlarmTraps NOTIFICATION-TYPE
             OBJECTS { hwAlarmTrapOrdinalNumber,hwAlarmText,hwAlarmLevel,hwAlarmSigDesc,hwSiteName,hwSiteAdminAddr,hwNetIdentifier,hwSiteDescription,hwSmokeSensorEquipId,hwSmokeEquipName,hwSmokeSensorFatherEquipname            }
             STATUS current
             DESCRIPTION
-                "Site is on fire, which is detected by smoke sensors. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID°¢equip name°¢father equip name are also include in VB(variable bondings)."
+                "Site is on fire, which is detected by smoke sensors. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID„ÄÅequip name„ÄÅfather equip name are also include in VB(variable bondings)."
             ::= { hwSiteAlarmTrapsPrefix 35 }
 
         hwSmokeAlarmResumeTraps NOTIFICATION-TYPE
             OBJECTS { hwAlarmTrapOrdinalNumber,hwAlarmText,hwAlarmLevel,hwAlarmSigDesc,hwSiteName,hwSiteAdminAddr,hwNetIdentifier,hwSiteDescription,hwSmokeSensorEquipId,hwSmokeEquipName,hwSmokeSensorFatherEquipname            }
             STATUS current
             DESCRIPTION
-                "Smoke alarm resume. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID°¢equip name°¢father equip name are also include in VB(variable bondings)."
+                "Smoke alarm resume. Its correlation binding parameters:  Site ID, Site name, Site description, NE ID, Alarm name, Alarm single description, Alarm port description, Alarm severity, and Site alarm SN. Additionally, in order to identify the device, equip ID„ÄÅequip name„ÄÅfather equip name are also include in VB(variable bondings)."
             ::= { hwSiteAlarmTrapsPrefix 36 }
 
         hwWireAlarmTraps NOTIFICATION-TYPE
@@ -13332,7 +13339,7 @@ DisplayString ::= TEXTUAL-CONVENTION
             OBJECTS { hwAlarmTrapOrdinalNumber,hwAlarmText,hwAlarmLevel,hwAlarmSigDesc,hwSiteName,hwSiteAdminAddr,hwNetIdentifier,hwSiteDescription,hwEsduEquipId,hwEsduEquipName,hwEsduTemp1OperStatus            }
             STATUS current
             DESCRIPTION
-                "The ESDU TEMP1 temperature is out of range£®too high or too low£©. "
+                "The ESDU TEMP1 temperature is out of rangeÔºàtoo high or too lowÔºâ. "
             ::= { hwSiteAlarmTrapsPrefix 163 }
 
         hwEsduTemp1AlarmResumeTraps NOTIFICATION-TYPE
@@ -13346,7 +13353,7 @@ DisplayString ::= TEXTUAL-CONVENTION
             OBJECTS { hwAlarmTrapOrdinalNumber,hwAlarmText,hwAlarmLevel,hwAlarmSigDesc,hwSiteName,hwSiteAdminAddr,hwNetIdentifier,hwSiteDescription,hwEsduEquipId,hwEsduEquipName,hwEsduTemp2OperStatus            }
             STATUS current
             DESCRIPTION
-                "The ESDU TEMP2 temperature is out of range£®too high or too low£©. "
+                "The ESDU TEMP2 temperature is out of rangeÔºàtoo high or too lowÔºâ. "
             ::= { hwSiteAlarmTrapsPrefix 165 }
 
         hwEsduTemp2AlarmResumeTraps NOTIFICATION-TYPE
