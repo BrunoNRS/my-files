@@ -6560,12 +6560,11 @@ DisplayString ::= TEXTUAL-CONVENTION
             ::= { hwDGEntry 3 }
 
         hwDGType OBJECT-TYPE
-            SYNTAX INTEGER
-                {
+            SYNTAX INTEGER {
                 intelligent(1),
                 non_intelligent(2),
                 unknown(255)
-                }
+            }
             MAX-ACCESS read-only
             STATUS current
             DESCRIPTION
